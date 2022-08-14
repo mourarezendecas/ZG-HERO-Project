@@ -1,10 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class CriaTarefa {
 
     static Scanner input = new Scanner(System.in);
-    ArrayList<Tarefa> tarefas = new ArrayList<Tarefa>();
 
     public static void adicionaTarefa(){
         Tarefa tarefa = new Tarefa();
@@ -15,6 +15,8 @@ public class CriaTarefa {
         tarefa.setDescricao(input.nextLine());
         System.out.printf("Digite a prioridade da tarefa: ");
         tarefa.setPrioridade(input.nextInt());
-
+        tarefa.setStatus(1);
+        ListaTarefas.adicionarTarefas(tarefa);
     }
+
 }

@@ -14,7 +14,7 @@ Projeto desenvolvido ao longo do Acelera ZG.
 ## Atualizações 
 - 14/08/2022 - Update do readme e link do Trello.
 
-#TODO-List
+# TODO-List
 
 # Trello 
 Você pode acompanhar o desenvolvimento deste projeto através do seguinte link do Trello.  

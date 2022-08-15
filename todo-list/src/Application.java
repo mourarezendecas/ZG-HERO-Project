@@ -1,4 +1,7 @@
-import java.util.List;
+import com.zghero.CRUD.CriaTarefa;
+import com.zghero.CRUD.DeletaTarefa;
+import com.zghero.CRUD.ListaTarefas;
+
 import java.util.Scanner;
 
 public class Application {
@@ -21,13 +24,13 @@ public class Application {
         switch (option)
         {
             case 1:
-                System.out.println("Criando tarefa");
+                System.out.println("Criando tarefa.");
                 CriaTarefa.adicionaTarefa();
                 System.out.println("TAREFA CADASTRADA COM SUCESSO");
                 iniciaApp();
                 break;
             case 2:
-                System.out.println("Listando tarefas");
+                System.out.println("Listando tarefas.");
                 ListaTarefas.listarTarefas();
                 iniciaApp();
                 break;
@@ -36,13 +39,19 @@ public class Application {
                 iniciaApp();
                 break;
             case 4:
-                System.out.println("Deletando tarefas");
+                System.out.println("Deletando tarefas.");
+                ListaTarefas.listarTarefas();
+                System.out.printf("Digite qual tarefa deseja deletar: ");
+                int i = input.nextInt();
+                input.nextLine();
+                DeletaTarefa.deletaTarefa(ListaTarefas.getTarefas(), i);
+                iniciaApp();
                 break;
             case 5:
-                System.out.println("Saindo do programa");
+                System.out.println("Saindo do programa.");
                 break;
             default:
-                System.out.println("Entrada inválida");
+                System.out.println("Entrada inválida.");
                 iniciaApp();
         }
 

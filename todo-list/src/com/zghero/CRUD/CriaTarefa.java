@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
+package com.zghero.CRUD;
+
 import java.util.Scanner;
 
 public class CriaTarefa {
@@ -15,6 +15,7 @@ public class CriaTarefa {
         tarefa.setDescricao(input.nextLine());
         System.out.printf("Digite a prioridade da tarefa: ");
         tarefa.setPrioridade(input.nextInt());
+        input.nextLine();
         tarefa.setStatus(1);
         ListaTarefas.adicionarTarefas(tarefa);
     }

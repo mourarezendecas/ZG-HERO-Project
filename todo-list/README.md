@@ -7,4 +7,4 @@ Até então foi feito um backend simples de CRUD de tarefas.
 
 ### Inicialização
 
-O arquivo main, se encontra na pasta src do arquivo e se chama Application.java
+O arquivo main se encontra na pasta src do arquivo e se chama Application.java

@@ -3,7 +3,7 @@ public class Tarefa {
     private String descricao;
 
     private String status;
-    private int prioridade;
+    private int prioridade, idStatus;
 
     public Tarefa() {
 
@@ -30,6 +30,7 @@ public class Tarefa {
     }
 
     public void setStatus(int i) {
+        this.idStatus = i;
         if(i==1)
         {
             this.status = "A fazer";

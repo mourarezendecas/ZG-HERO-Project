@@ -1,6 +1,7 @@
 import com.zghero.CRUD.CriaTarefa;
 import com.zghero.CRUD.DeletaTarefa;
 import com.zghero.CRUD.ListaTarefas;
+import com.zghero.CRUD.UpdateStatus;
 
 import java.util.Scanner;
 
@@ -10,6 +11,7 @@ public class Application {
     }
 
     public static void iniciaApp(){
+        int i;
         Scanner input = new Scanner(System.in);
         System.out.println("--- TO DO LIST ---");
         System.out.println("1 - Criar tarefa");
@@ -31,19 +33,26 @@ public class Application {
                 break;
             case 2:
                 System.out.println("Listando tarefas.");
-                ListaTarefas.listarTarefas();
+                ListaTarefas.listarTarefasPrioridade();
                 iniciaApp();
                 break;
             case 3:
                 System.out.println("Setando status");
+                ListaTarefas.listarTarefas();
+                System.out.println("Digite qual tarefa deseja mudar o Status: ");
+                i = input.nextInt();
+                input.nextLine();
+                i = i -1;
+                UpdateStatus.updateStatus(ListaTarefas.getTarefas(), i);
                 iniciaApp();
                 break;
             case 4:
                 System.out.println("Deletando tarefas.");
                 ListaTarefas.listarTarefas();
                 System.out.printf("Digite qual tarefa deseja deletar: ");
-                int i = input.nextInt();
+                i = input.nextInt();
                 input.nextLine();
+                i = i - 1;
                 DeletaTarefa.deletaTarefa(ListaTarefas.getTarefas(), i);
                 iniciaApp();
                 break;

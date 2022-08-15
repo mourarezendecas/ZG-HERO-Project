@@ -14,15 +14,47 @@ public class ListaTarefas {
     }
     public static void listarTarefas()
     {
+        int i = 1;
         for(Tarefa tasks: tarefas)
         {
             System.out.println();
-            System.out.println("----- TAREFA -----");
-            System.out.println("Nome: " + tasks.getNome());
-            System.out.println("Descrição: " + tasks.getDescricao());
-            System.out.println("Prioridade: " + tasks.getPrioridade());
-            System.out.println("Status: " + tasks.getStatus());
-            System.out.println();
+            System.out.println("----- TAREFA " + i + " -----");
+            tasks.imprimeTarefa();
+            i++;
+        }
+    }
+
+    public static void listarTarefasPrioridade(){
+        for(Tarefa tasks: tarefas)
+        {
+            if (tasks.getPrioridade() == 1)
+            {
+                tasks.imprimeTarefa();
+            }
+        }
+        for(Tarefa tasks: tarefas)
+        {
+            if (tasks.getPrioridade() == 2) {
+                tasks.imprimeTarefa();
+            }
+        }
+        for(Tarefa tasks: tarefas)
+        {
+            if (tasks.getPrioridade() == 3) {
+                tasks.imprimeTarefa();
+            }
+        }
+        for(Tarefa tasks: tarefas)
+        {
+            if (tasks.getPrioridade() == 4) {
+                tasks.imprimeTarefa();
+            }
+        }
+        for(Tarefa tasks: tarefas)
+        {
+            if (tasks.getPrioridade() == 5) {
+                tasks.imprimeTarefa();
+            }
         }
     }
 

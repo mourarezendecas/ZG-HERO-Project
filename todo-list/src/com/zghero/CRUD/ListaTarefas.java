@@ -1,5 +1,7 @@
 package com.zghero.CRUD;
 
+import com.zghero.classes.Tarefa;
+
 import java.util.ArrayList;
 
 public class ListaTarefas {

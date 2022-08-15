@@ -1,3 +1,5 @@
+package com.zghero.classes;
+
 public class Tarefa {
     private String nome;
     private String descricao;

@@ -9,15 +9,8 @@
 
 # Linketinder 
 
-Projeto desenvolvido ao longo do Acelera ZG. 
-
-## Atualizações 
-- 14/08/2022 - Update do readme e link do Trello.
-
 # TODO-List
 
-# Trello 
-Você pode acompanhar o desenvolvimento deste projeto através do seguinte link do Trello.  
-https://trello.com/invite/b/lDafARc1/507a8772d0c6d03094abe3f5ad937592/todo-list
+
 
 

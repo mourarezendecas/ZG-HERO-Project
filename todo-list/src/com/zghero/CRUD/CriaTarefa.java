@@ -15,7 +15,7 @@ public class CriaTarefa {
         tarefa.setNome(input.nextLine());
         System.out.printf("Digite a descrição da tarefa: ");
         tarefa.setDescricao(input.nextLine());
-        System.out.printf("Digite a prioridade da tarefa: ");
+        System.out.printf("Digite a prioridade da tarefa(1-5): ");
         tarefa.setPrioridade(input.nextInt());
         input.nextLine();
         tarefa.setStatus(1);

@@ -31,11 +31,31 @@ public class Application {
                 System.out.println("TAREFA CADASTRADA COM SUCESSO");
                 iniciaApp();
                 break;
+
             case 2:
                 System.out.println("Listando tarefas.");
-                ListaTarefas.listarTarefasPrioridade();
+                System.out.println("1 - STATUS");
+                System.out.println("2 - PRIODIDADE");
+                System.out.println("3 - STATUS");
+                System.out.printf("Digite o tipo de listagem: ");
+                int opt = input.nextInt();
+                input.nextLine();
+                    switch (opt){
+                        case 1:
+                            System.out.println("Listando por Categoria");
+                            break;
+                        case 2:
+                            System.out.println("Listando por Prioridade");
+                            ListaTarefas.listarTarefasPrioridade();
+                            break;
+                        case 3:
+                            System.out.println("Listando por Status");
+                            ListaTarefas.listarStatus();
+                            break;
+                    }
                 iniciaApp();
                 break;
+
             case 3:
                 System.out.println("Setando status");
                 ListaTarefas.listarTarefas();
@@ -46,6 +66,7 @@ public class Application {
                 UpdateStatus.updateStatus(ListaTarefas.getTarefas(), i);
                 iniciaApp();
                 break;
+
             case 4:
                 System.out.println("Deletando tarefas.");
                 ListaTarefas.listarTarefas();
@@ -56,9 +77,11 @@ public class Application {
                 DeletaTarefa.deletaTarefa(ListaTarefas.getTarefas(), i);
                 iniciaApp();
                 break;
+
             case 5:
                 System.out.println("Saindo do programa.");
                 break;
+
             default:
                 System.out.println("Entrada inválida.");
                 iniciaApp();

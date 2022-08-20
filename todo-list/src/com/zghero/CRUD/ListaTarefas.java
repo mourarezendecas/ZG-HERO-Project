@@ -58,6 +58,30 @@ public class ListaTarefas {
         }
     }
 
+    public static void listarStatus(){
+        for(Tarefa tasks : tarefas)
+        {
+            if(tasks.getStatus().equals("A fazer"))
+            {
+                tasks.imprimeTarefa();
+            }
+        }
+        for(Tarefa tasks : tarefas)
+        {
+            if(tasks.getStatus().equals("Fazendo"))
+            {
+                tasks.imprimeTarefa();
+            }
+        }
+        for(Tarefa tasks : tarefas)
+        {
+            if(tasks.getStatus().equals("Feito."))
+            {
+                tasks.imprimeTarefa();
+            }
+        }
+    }
+
     public static ArrayList<Tarefa> getTarefas() {
         return tarefas;
     }

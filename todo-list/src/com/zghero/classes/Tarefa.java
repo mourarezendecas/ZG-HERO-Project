@@ -1,11 +1,10 @@
 package com.zghero.classes;
 
 public class Tarefa {
-    private String nome;
-    private String descricao;
+    private String descricao, status, nome, categoria;
 
-    private String status;
-    private int prioridade, idStatus;
+    private int prioridade, idStatus, idCat;
+
 
     public Tarefa() {
 
@@ -52,11 +51,29 @@ public class Tarefa {
         this.prioridade = prioridade;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(int i) {
+        this.idCat = i;
+        if(i==1)
+        {
+            this.categoria = "Pessoal";
+        } else if (i==2) {
+            this.categoria = "Profissional";
+        }
+        else{
+            this.categoria = "Acadêmico";
+        }
+    }
+
     public void imprimeTarefa()
     {
 
         System.out.println("Nome: " + this.getNome());
         System.out.println("Descrição: " + this.getDescricao());
+        System.out.println("Categoria: " +this.getCategoria());
         System.out.println("Prioridade: " + this.getPrioridade());
         System.out.println("Status: " + this.getStatus());
         System.out.println();

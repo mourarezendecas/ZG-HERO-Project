@@ -2,8 +2,7 @@
 
 ## Sobre o projeto
 
-O TODO List é um projeto proposto como um desafio a ser cumprido ao longo do Acelera ZG. <br>
-Até então foi feito um backend simples de CRUD de tarefas.
+O ToDo list é um projeto proposto como conclusão da trilha de Java no Kit 1. 
 
 ### Inicialização
 
@@ -15,19 +14,19 @@ O arquivo main se encontra na pasta src do arquivo e se chama Application.java
 
 Deve ser possível listar as atividades por:
 
-Categoria
+:heavy_check_mark: Categoria
 
 :heavy_check_mark: Prioridade
 
-Status
+:heavy_check_mark: Status
 
-Quando uma nova atividade for inserida, deve ser feito o rebalanceamento da ordem verificando a prioridade da mesma, para inseri-la na posição ideal;
+:heavy_check_mark: Quando uma nova atividade for inserida, deve ser feito o rebalanceamento da ordem verificando a prioridade da mesma, para inseri-la na posição ideal;
 
 :heavy_check_mark: O projeto deve ser implementado em Java.
 
 ### Requisitos Opcionais
 
-Ser possível consultar o número de atividades concluídas (Done), estão para fazer (ToDo) e estão sendo feitas (Doing);
+:heavy_check_mark: Ser possível consultar o número de atividades concluídas (Done), estão para fazer (ToDo) e estão sendo feitas (Doing);
 
 :heavy_check_mark: Ser possível Atualizar tarefa;
 

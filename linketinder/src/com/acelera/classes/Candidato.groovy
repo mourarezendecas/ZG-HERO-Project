@@ -10,13 +10,17 @@ class Candidato {
 
     @Override
     public String toString() {
-        return "Candidato: " + nome +"\n"+
-                "e-mail: " + email +"\n"+
-                "CPF: " + CPF +"\n"+
-                "Estado: " + estado + "\n"+
-                "CEP: " + CEP + "\n" +
-                "Descrição: " + descPessoal + "\n" +
-                "Competências: " + competencias + "\n";
+        return """
+                \n
+                Candidato: $nome
+                e-mail: $email
+                CPF: $CPF
+                Estado: $estado
+                CEP: $CEP
+                Descrição: $descPessoal
+                Competências: $competencias
+                \n
+                """
     }
 
     def curtida (Empresa empresa){

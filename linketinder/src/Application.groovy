@@ -44,6 +44,7 @@ import com.acelera.main.Curtidas
                 break
             case 5:
                 Curtidas.main()
+                menu()
                 break
         }
     }

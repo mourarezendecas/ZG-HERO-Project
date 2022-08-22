@@ -150,4 +150,11 @@ class GeraCandidatoeEmpresa {
         Empresas.add(empresa)
     }
 
+    static ArrayList getCandidatos() {
+        return Candidatos
+    }
+
+    static ArrayList getEmpresas() {
+        return Empresas
+    }
 }

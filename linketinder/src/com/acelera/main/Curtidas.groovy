@@ -11,19 +11,42 @@ class Curtidas {
         println "2 - ACESSAR COMO CANDIDATO"
         printf "Digite a opção desejada: "
         def opt = System.in.newReader().readLine() as Integer
-        println "---EMPRESA: " + i + " ---"
-
 
         if(opt==1) {
-            for (Empresa empresa : GeraCandidatoeEmpresa.listaEmpresas()) {
-                empresa.toString()
+            printf "Qual empresa é você? "
+            def empresaCurtindo = System.in.newReader().readLine() as String
+
+            for (Empresa empresa : GeraCandidatoeEmpresa.getEmpresas()) {
+                if (empresaCurtindo.equals(empresa.nome)) {
+                   for(Candidato candidato : GeraCandidatoeEmpresa.getCandidatos()) {
+                       println candidato.toString()
+                       printf "Deseja curtir esse candidato? (1 - Sim / 2 - Não): "
+                       def curtir = System.in.newReader().readLine() as Integer
+                       if (curtir == 1) {
+                           empresa.curtida(candidato)
+                       }
+                   }
+                }
             }
+
         }
         else
         {
-            for (Candidato candidato : GeraCandidatoeEmpresa.listaCandidatos()) {
-
-                candidato.toString()
+            printf "Qual candidato é você? "
+            def candidatoCurtindo = System.in.newReader().readLine() as String
+            for (Candidato candidato : GeraCandidatoeEmpresa.getCandidatos()) {
+                if(candidatoCurtindo.equals(candidato.nome))
+                {
+                    for (Empresa empresa : GeraCandidatoeEmpresa.getEmpresas())
+                    {
+                        println empresa.toString()
+                        printf "Deseja curtir essa empresa? (1 - Sim / 2 - Não): "
+                        def curtir = System.in.newReader().readLine() as Integer
+                        if (curtir == 1) {
+                            candidato.curtida(empresa)
+                        }
+                    }
+                }
             }
         }
 

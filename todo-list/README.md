@@ -38,7 +38,7 @@ Seria um diferencial para o seu programa ter uma persistência. Não é interess
 Requisitos Obrigatórios:
 
 :heavy_check_mark: Implementar a opção de alarme para as tarefas; <br>
-Acionar o aviso de alarme quando o período definido chegar.
+:heavy_check_mark: Acionar o aviso de alarme quando o período definido chegar.
 
 Requisições opcionais:
 

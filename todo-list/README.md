@@ -30,4 +30,16 @@ Deve ser possível listar as atividades por:
 
 :heavy_check_mark: Ser possível Atualizar tarefa;
 
-Seria um diferencial para o seu programa ter uma persistência. Não é interessante perder todas as atividades sempre que o programa é fechado, então pense em salvar os dados em algum arquivo (.csv, .txt, .docks etc). 
+Seria um diferencial para o seu programa ter uma persistência. Não é interessante perder todas as atividades sempre que o programa é fechado, então pense em salvar os dados em algum arquivo (.csv, .txt, .docks etc).
+
+## Trilha dos desafios 
+### Criando alarme de tasks para o TODO List
+
+Requisitos Obrigatórios:
+
+:heavy_check_mark: Implementar a opção de alarme para as tarefas; <br>
+Acionar o aviso de alarme quando o período definido chegar.
+
+Requisições opcionais:
+
+Possibilidade de configurar mais de um alarme por tarefa;

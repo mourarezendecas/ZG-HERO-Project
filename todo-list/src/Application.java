@@ -2,16 +2,18 @@ import com.zghero.CRUD.CriaTarefa;
 import com.zghero.CRUD.DeletaTarefa;
 import com.zghero.CRUD.ListaTarefas;
 import com.zghero.CRUD.UpdateStatus;
+import com.zghero.alarm.AlarmClock;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Application {
-    public static void main(String[] args) {
-        iniciaApp();
-    }
+    public static void main(String[] args) {iniciaApp();}
 
     public static void iniciaApp(){
         int i, j;
+        Date dataAtual = new Date();
+
         Scanner input = new Scanner(System.in);
         System.out.println("--- TO DO LIST ---");
         System.out.println("1 - Criar tarefa");
@@ -19,7 +21,8 @@ public class Application {
         System.out.println("3 - Atualizar Status");
         System.out.println("4 - Deletar tarefas");
         System.out.println("5 - Listar concluídas, a fazer e feitas");
-        System.out.println("6 - Fechar programa");
+        System.out.println("6 - Listar atividades com alarme");
+        System.out.println("7 - Fechar programa");
 
         System.out.printf("Opção desejada: ");
         int option = input.nextInt();
@@ -98,9 +101,16 @@ public class Application {
             case 5:
                 System.out.println("Imprimindo Status");
                 ListaTarefas.getStatus();
+                iniciaApp();
                 break;
 
             case 6:
+                System.out.println("--TAREFAS COM ALARME---");
+                AlarmClock.listaTarefas();
+                iniciaApp();
+                break;
+
+            case 7:
                 System.out.println("Saindo do programa.");
                 break;
 
@@ -108,6 +118,7 @@ public class Application {
                 System.out.println("Entrada inválida.");
                 iniciaApp();
         }
+
 
     }
 

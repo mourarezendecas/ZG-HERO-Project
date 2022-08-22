@@ -1,9 +1,13 @@
 package com.zghero.classes;
 
+import java.util.Date;
+
 public class Tarefa {
     private String descricao, status, nome, categoria;
 
     private int prioridade, idStatus, idCat;
+
+    private Date dataAlarme;
 
 
     public Tarefa() {
@@ -68,6 +72,14 @@ public class Tarefa {
         }
     }
 
+    public Date getDataAlarme() {
+        return dataAlarme;
+    }
+
+    public void setDataAlarme(Date dataAlarme) {
+        this.dataAlarme = dataAlarme;
+    }
+
     public void imprimeTarefa()
     {
 
@@ -76,6 +88,10 @@ public class Tarefa {
         System.out.println("Categoria: " +this.getCategoria());
         System.out.println("Prioridade: " + this.getPrioridade());
         System.out.println("Status: " + this.getStatus());
+        if(dataAlarme!=null)
+        {
+            System.out.println("Alarme habilitado para: " + this.getDataAlarme());
+        }
         System.out.println();
     }
 

@@ -5,7 +5,7 @@ package com.acelera.classes
 class Empresa {
     String nome, email, CNPJ, pais, estado, CEP, descricao;
     List competencias = []
-
+    List cadidatosCurtidos = []
 
     @Override
     public String toString() {
@@ -18,4 +18,9 @@ class Empresa {
         "Descrição: " + descricao + "\n" +
         "Competências esperadas: " + competencias + "\n";
     }
+
+    def curtida (Candidato candidato){
+        cadidatosCurtidos.add(candidato)
+    }
+
 }

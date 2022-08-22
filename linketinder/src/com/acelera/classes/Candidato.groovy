@@ -5,8 +5,8 @@ import groovy.transform.ToString
 class Candidato {
     String nome, email, CPF, estado, CEP, descPessoal
     int idade
-    ArrayList<String> competencias = []
-
+    List competencias = []
+    List empresasCurtidas = []
 
     @Override
     public String toString() {
@@ -17,6 +17,10 @@ class Candidato {
                 "CEP: " + CEP + "\n" +
                 "Descrição: " + descPessoal + "\n" +
                 "Competências: " + competencias + "\n";
+    }
+
+    def curtida (Empresa empresa){
+        empresasCurtidas.add(empresa)
     }
 
 }

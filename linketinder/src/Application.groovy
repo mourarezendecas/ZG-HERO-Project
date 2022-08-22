@@ -1,6 +1,7 @@
 import com.acelera.generators.CriaCandidato
 import com.acelera.generators.CriaEmpresa
 import com.acelera.generators.GeraCandidatoeEmpresa
+import com.acelera.main.Curtidas
 
 //Invoca a Classe geradora de Candidatos e Empresas
     GeraCandidatoeEmpresa.geraCandidatos()
@@ -15,6 +16,8 @@ import com.acelera.generators.GeraCandidatoeEmpresa
         println "2 - LISTAR TODAS AS EMPRESAS"
         println "3 - CRIAR CANDIDATO"
         println "4 - CRIAR EMPRESA"
+        println "5 - CURTIR CANDIDATOS OU EMPRESAS"
+        println "6 - SAIR"
         printf "Escolha a opção: "
         def opt = System.in.newReader().readLine() as Integer
         switchMenu(opt)
@@ -38,6 +41,9 @@ import com.acelera.generators.GeraCandidatoeEmpresa
             case 4:
             CriaEmpresa.cria()
                 menu()
+                break
+            case 5:
+                Curtidas.main()
                 break
         }
     }

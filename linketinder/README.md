@@ -1,5 +1,7 @@
 # Linketinder
 
+O arquivo main se enconta na pasta src e se chama Application.groovy
+
 ## Requisitos obrigatórios:
 
 :heavy_check_mark: O programa tem que manter um array de candidatos com no mínimo 5 candidatos cadastrados:
